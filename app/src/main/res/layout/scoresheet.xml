@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor">
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="Top Section"
+                android:textSize="16sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:background="@drawable/table_border"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Ones" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:text="Twos"
+                android:background="@drawable/table_border"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Threes"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Fours"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Fives"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Sixes"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Subtotal"
+                android:textStyle="bold"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="35 Bonus (63 or more)"
+                android:textStyle="bold"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Total of Top Section"
+                android:textStyle="bold"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="Bottom Section" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Three of a kind"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Four of a kind"
+                android:background="@drawable/table_border" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Full House"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Low Straight"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="High Straight"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Yatzy!"
+                android:background="@drawable/table_border" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="2nd Yatzy!"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Chance"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:paddingRight="16dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Total of Bottom Section"
+                android:textStyle="bold"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Grand Total"
+                android:textStyle="bold"
+                android:background="@drawable/table_border"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="10"
+                android:textSize="16sp"/>
+        </TableRow>
+
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>

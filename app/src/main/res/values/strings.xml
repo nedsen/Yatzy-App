@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Yatzy</string>
+    <string name="scorebutton_up_text">Hide Score Sheet</string>
+    <string name="scorebutton_down_text">Show Score Sheet</string>
+</resources>

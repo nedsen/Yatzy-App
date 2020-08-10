@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#185718</color>
+    <color name="colorPrimaryDark">#103A10</color>
+    <color name="colorPrimaryLight">#228022</color>
+
+    <color name="colorAccent">#E4AD00</color>
+    <color name="backColor">#185718</color>
+
+    <color name="selected_score_color">#000000</color>
+    <color name="unselected_score_color">#AAAAAA</color>
+    <color name="scored_score_color">#000000</color>
+
+    <color name="scored_score_background">#AAAAAA </color>
+    <color name="unselected_score_background">#FFFFFF</color>
+
+    <color name="unclickable_button_color">#CCCCCC</color>
+</resources>

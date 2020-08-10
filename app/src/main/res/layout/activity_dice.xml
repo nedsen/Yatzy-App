@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor"
+    tools:context=".Dice">
+
+    <View
+        android:id="@+id/verdiv"
+        android:layout_width="1dp"
+        android:layout_height="715dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/hordiv"
+        android:layout_width="395dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dice1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_white"
+        app:layout_constraintBottom_toTopOf="@+id/hordiv"
+        app:layout_constraintEnd_toStartOf="@+id/verdiv"
+        app:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/dice2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_white"
+        app:layout_constraintBottom_toTopOf="@+id/hordiv"
+        app:layout_constraintStart_toEndOf="@+id/verdiv"
+        app:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/dice3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:background="@drawable/background_white"
+        app:layout_constraintEnd_toStartOf="@+id/verdiv"
+        app:layout_constraintTop_toBottomOf="@+id/hordiv"
+        app:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/dice4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/background_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hordiv"
+        app:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/dice5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_white"
+        app:layout_constraintStart_toEndOf="@+id/verdiv"
+        app:layout_constraintTop_toBottomOf="@+id/hordiv"
+        app:srcCompat="@drawable/dice_1" />
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_background"
+        android:text="Roll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice4" />
+
+
+    <ScrollView
+        android:id="@+id/scoresheet_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <TableLayout
+            android:id="@+id/scoretable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:layout_span="2"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="Top Section"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Ones"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ones_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Twos"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/twos_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Threes"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/threes_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Fours"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fours_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Fives"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fives_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Sixes"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sixes_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Subtotal"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtotal_top_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="35 Bonus (63 or more)"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bonus_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Total of Top Section"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_top_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:layout_span="2"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="Bottom Section"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Three of a kind"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/three_kind_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Four of a kind"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/four_kind_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Full House"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/full_house_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Low Straight"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/low_straight_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="High Straight"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/high_straight_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Yatzy!"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/yatzy_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="2nd Yatzy!"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/yatzy2_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Chance"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/chance_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/unselected_score_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="16dp"
+                    android:text="Total of Bottom Section"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_bottom_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border">
+
+                <TextView
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Grand Total"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_grand_text"
+                    android:layout_height="@dimen/scoretable_rowheight"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+    <!--
+    <TableLayout
+        android:id="@+id/score_table"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:layout_span="2"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="Top Section"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Ones"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ones_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Twos"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/twos_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Threes"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/threes_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Fours"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fours_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Fives"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fives_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Sixes"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sixes_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Subtotal"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subtotal_top_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="35 Bonus (63 or more)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bonus_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Total of Top Section"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_top_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:layout_span="2"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="Bottom Section"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Three of a kind"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/three_kind_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Four of a kind"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/four_kind_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Full House"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/full_house_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Low Straight"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/low_straight_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="High Straight"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/high_straight_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Yatzy!"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/yatzy_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="2nd Yatzy!"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/yatzy2_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Chance"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/chance_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:paddingRight="16dp"
+                android:text="Total of Bottom Section"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_bottom_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scoretable_rowheight"
+            android:background="@drawable/table_border">
+
+            <TextView
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:background="@drawable/table_border"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Grand Total"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_grand_text"
+                android:layout_height="@dimen/scoretable_rowheight"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>!-->
+
+    <Button
+        android:id="@+id/score_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/button_background"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Show Score Sheet"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/scoresheet_scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/end_turn_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background"
+        android:text="End Turn"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/playerTurnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="It is 's Turn"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/hordiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
